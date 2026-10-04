@@ -1,0 +1,13 @@
+{
+  "device_family": "console",
+  "platform": "xbox",
+  "model": "Series S",
+  "revision": "GQ4-00001",
+  "cpu": "Custom AMD Zen 2 8-core",
+  "gpu": "Custom RDNA 2 10-core GPU",
+  "ram_gb": 10,
+  "storage_gb": 512,
+  "boot_state": "recovery",
+  "power_profile": "normal",
+  "firmware_version": "10.0.19041"
+}

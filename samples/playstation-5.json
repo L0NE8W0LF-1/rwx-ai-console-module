@@ -1,0 +1,13 @@
+{
+  "device_family": "console",
+  "platform": "playstation",
+  "model": "PS5",
+  "revision": "CFI-1000A",
+  "cpu": "Custom AMD Zen 2 8-core",
+  "gpu": "Custom RDNA 2 10-core GPU",
+  "ram_gb": 16,
+  "storage_gb": 1000,
+  "boot_state": "normal",
+  "power_profile": "normal",
+  "firmware_version": "8.01"
+}

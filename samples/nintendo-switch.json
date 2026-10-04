@@ -1,0 +1,13 @@
+{
+  "device_family": "console",
+  "platform": "nintendo",
+  "model": "Switch",
+  "revision": "HAC-001(-01)",
+  "cpu": "Custom ARM Cortex-A57 quad-core",
+  "gpu": "Maxwell-based GPU",
+  "ram_gb": 4,
+  "storage_gb": 64,
+  "boot_state": "recovery",
+  "power_profile": "portable",
+  "firmware_version": "15.0.1"
+}
