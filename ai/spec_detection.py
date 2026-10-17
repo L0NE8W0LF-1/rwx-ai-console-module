@@ -10,6 +10,39 @@ DEFAULT_RULES = {
     "pc": {"recovery": 0.80, "normal": 0.75, "fault": 0.50},
 }
 
+PLATFORM_ALIASES = {
+    "pc": "pc",
+    "computer": "pc",
+    "desktop": "pc",
+    "laptop": "pc",
+    "notebook": "pc",
+    "dell": "pc",
+    "lenovo": "pc",
+    "hp": "pc",
+    "hewlett-packard": "pc",
+    "apple": "pc",
+    "macbook": "pc",
+    "asus": "pc",
+    "acer": "pc",
+    "msi": "pc",
+    "surface": "pc",
+    "alienware": "pc",
+    "thinkpad": "pc",
+    "xps": "pc",
+}
+
+
+def normalize_platform(profile):
+    platform = str(profile.get("platform", "pc")).strip().lower()
+    brand = str(profile.get("brand", "")).strip().lower()
+    for source in (brand, platform):
+        if not source:
+            continue
+        resolved = PLATFORM_ALIASES.get(source)
+        if resolved:
+            return resolved
+    return platform or "pc"
+
 
 def load_profile(path: str):
     file_path = Path(path)
@@ -20,9 +53,9 @@ def load_profile(path: str):
 
 
 def score_profile(profile):
-    platform = str(profile.get("platform", "console")).lower()
+    platform = normalize_platform(profile)
     boot_state = str(profile.get("boot_state", "unknown")).lower()
-    rules = DEFAULT_RULES.get(platform, DEFAULT_RULES["console"])
+    rules = DEFAULT_RULES.get(platform, DEFAULT_RULES["pc"])
     score = rules.get(boot_state, 0.5)
 
     if profile.get("cpu"):

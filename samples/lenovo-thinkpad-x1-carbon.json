@@ -1,0 +1,14 @@
+{
+  "device_family": "laptop",
+  "platform": "pc",
+  "brand": "Lenovo",
+  "model": "ThinkPad X1 Carbon Gen 9",
+  "revision": "TPX1C9-2022",
+  "cpu": "Intel Core i7-1260P",
+  "gpu": "Intel Iris Xe Graphics",
+  "ram_gb": 32,
+  "storage_gb": 1000,
+  "boot_state": "recovery",
+  "power_profile": "mobile",
+  "firmware_version": "N2VET67W (1.32)"
+}

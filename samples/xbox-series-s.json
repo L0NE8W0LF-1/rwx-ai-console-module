@@ -1,13 +1,14 @@
 {
-  "device_family": "console",
-  "platform": "xbox",
-  "model": "Series S",
-  "revision": "GQ4-00001",
-  "cpu": "Custom AMD Zen 2 8-core",
-  "gpu": "Custom RDNA 2 10-core GPU",
-  "ram_gb": 10,
-  "storage_gb": 512,
+  "device_family": "desktop",
+  "platform": "pc",
+  "brand": "Microsoft",
+  "model": "Surface Studio 2",
+  "revision": "STUDIO-2-2020",
+  "cpu": "Intel Core i7-11370H",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "ram_gb": 32,
+  "storage_gb": 1000,
   "boot_state": "recovery",
-  "power_profile": "normal",
-  "firmware_version": "10.0.19041"
+  "power_profile": "desktop",
+  "firmware_version": "11.0.0"
 }

@@ -23,11 +23,42 @@ class RWXAIEngine:
         "pc": {"recovery": 0.80, "normal": 0.75, "fault": 0.50},
         "console": {"recovery": 0.95, "normal": 0.90, "fault": 0.65},
     }
+    PLATFORM_ALIASES = {
+        "pc": "pc",
+        "computer": "pc",
+        "desktop": "pc",
+        "laptop": "pc",
+        "notebook": "pc",
+        "dell": "pc",
+        "lenovo": "pc",
+        "hp": "pc",
+        "hewlett-packard": "pc",
+        "apple": "pc",
+        "macbook": "pc",
+        "asus": "pc",
+        "acer": "pc",
+        "msi": "pc",
+        "surface": "pc",
+        "alienware": "pc",
+        "thinkpad": "pc",
+        "xps": "pc",
+    }
+
+    def _normalize_platform(self, profile):
+        platform = str(profile.get("platform", "pc")).strip().lower()
+        brand = str(profile.get("brand", "")).strip().lower()
+        for source in (brand, platform):
+            if not source:
+                continue
+            resolved = self.PLATFORM_ALIASES.get(source)
+            if resolved:
+                return resolved
+        return platform or "pc"
 
     def analyze_profile(self, profile):
-        platform = str(profile.get("platform", "console")).lower()
+        platform = self._normalize_platform(profile)
         boot_state = str(profile.get("boot_state", "unknown")).lower()
-        base_score = self.PLATFORM_RULES.get(platform, self.PLATFORM_RULES["console"]).get(boot_state, 0.5)
+        base_score = self.PLATFORM_RULES.get(platform, self.PLATFORM_RULES["pc"]).get(boot_state, 0.5)
 
         bonus = 0.0
         if profile.get("cpu"):

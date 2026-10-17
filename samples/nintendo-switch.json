@@ -1,13 +1,14 @@
 {
-  "device_family": "console",
-  "platform": "nintendo",
-  "model": "Switch",
-  "revision": "HAC-001(-01)",
-  "cpu": "Custom ARM Cortex-A57 quad-core",
-  "gpu": "Maxwell-based GPU",
-  "ram_gb": 4,
-  "storage_gb": 64,
+  "device_family": "laptop",
+  "platform": "pc",
+  "brand": "Dell",
+  "model": "XPS 13 9310",
+  "revision": "XPS13-9310-01",
+  "cpu": "Intel Core i7-1165G7",
+  "gpu": "Intel Iris Xe Graphics",
+  "ram_gb": 16,
+  "storage_gb": 512,
   "boot_state": "recovery",
-  "power_profile": "portable",
-  "firmware_version": "15.0.1"
+  "power_profile": "mobile",
+  "firmware_version": "1.22.1"
 }

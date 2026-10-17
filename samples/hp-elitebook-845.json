@@ -1,0 +1,14 @@
+{
+  "device_family": "laptop",
+  "platform": "pc",
+  "brand": "HP",
+  "model": "EliteBook 845 G9",
+  "revision": "8J81-001",
+  "cpu": "AMD Ryzen 7 Pro 6850U",
+  "gpu": "AMD Radeon 680M",
+  "ram_gb": 16,
+  "storage_gb": 512,
+  "boot_state": "normal",
+  "power_profile": "mobile",
+  "firmware_version": "F.18"
+}

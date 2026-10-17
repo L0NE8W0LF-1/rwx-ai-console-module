@@ -1,0 +1,14 @@
+{
+  "device_family": "laptop",
+  "platform": "pc",
+  "brand": "ASUS",
+  "model": "ZenBook 14",
+  "revision": "UM3402YA",
+  "cpu": "AMD Ryzen 7 7840U",
+  "gpu": "AMD Radeon 780M",
+  "ram_gb": 16,
+  "storage_gb": 1000,
+  "boot_state": "fault",
+  "power_profile": "mobile",
+  "firmware_version": "3.10.05"
+}

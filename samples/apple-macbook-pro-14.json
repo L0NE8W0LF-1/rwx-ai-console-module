@@ -1,0 +1,14 @@
+{
+  "device_family": "laptop",
+  "platform": "pc",
+  "brand": "Apple",
+  "model": "MacBook Pro 14-inch",
+  "revision": "M2-2023",
+  "cpu": "Apple M2 8-core",
+  "gpu": "Apple integrated GPU",
+  "ram_gb": 16,
+  "storage_gb": 1000,
+  "boot_state": "normal",
+  "power_profile": "mobile",
+  "firmware_version": "14.5"
+}
